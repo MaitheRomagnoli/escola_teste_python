@@ -57,6 +57,6 @@ def verificar_aprovacao(entrada:list[float]) -> float:
         if nota > 5 or nota < 7:
             raise ValueError("recuperação")
         elif nota >= 7 or nota >= 10:
-            print("aprovado")                               
+            raise ValueError("aprovado")                               
 
 
