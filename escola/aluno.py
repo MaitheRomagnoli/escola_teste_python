@@ -48,13 +48,13 @@ def calcular_media(entrada:list[float]) -> float:
 
 # nova função
 # validando se foi aprovado ou reprovado, ou recuparação
-def verificar_aprovacao(entrada:list[float]) -> float:
+def verificar_aprovacao(entrada:list[float]) -> str:
     for nota in entrada:
         if nota < 5:
-            raise ValueError("reprovado")
+            return "reprovado"
 
     for nota in entrada:
-        if nota > 5 or nota < 7:
-            raise ValueError("recuperacao")
-        elif nota >= 7 or nota >= 10:
-            raise ValueError("aprovado")                
+        if nota > 5 and nota < 7:
+            return "recuperacao"
+        elif nota >= 7 and nota >= 10:
+            return "aprovado"               
